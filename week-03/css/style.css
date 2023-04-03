@@ -199,3 +199,118 @@ text-align: center;
     width: 364px;
     height: 138px;
 }
+
+.send-button{
+    background-color: #AACE9B;
+    width: 110px;
+    height: 33px;
+    border-radius: 4px;
+    border-color: #AACE9B;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/*About us*/
+
+.about-us{
+    color: #373867;
+    text-align:center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 200px;
+}
+
+.caja-texto{
+    width: 400px;
+    height: 200px;
+    border-radius: 5px;
+    border-color: #000;
+    margin-left: 260px;
+    text-align: center;
+}
+
+/*Activities*/
+
+.activities{
+    color: #373867;
+    text-align:center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 200px;
+}
+
+.activity-name{
+    margin-top: 196px;
+    margin-bottom: 90px;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 30px;
+}
+
+.activity-01{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.activity-02{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.activity-03{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+/*membership*/
+
+.membership-01{
+    width: 311px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #2A2A32;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.membership-02{
+    width: 311px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #CCCBCB;
+    border-color: #CCCBCB;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.membership-03{
+    width: 311px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #EDEDED;
+    border-color:#EDEDED;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.membership-info{
+    text-align: left;
+    margin-left: 350px;
+    margin-bottom: 80px;
+}
+
+/*footer*/
+
+.footer{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}

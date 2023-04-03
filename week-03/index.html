@@ -71,7 +71,7 @@
     <article class="screen-02">
             <div class="screen-02-pair1">
                 <img src="../assets/img/appointment-img.png" alt="appointment">
-                <p class="screen-02-appointment">Appointment booking </p>
+                <p>Appointment booking </p>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                 Minima tempora eos quibusdam exercitationem aspernatur.</p>
                 <img src="../assets/img/management-img.png" alt="management" width="249" height="178">
@@ -122,45 +122,58 @@
             <p class="textarea-screen03">Comments</p>
             <textarea name= "Comments" id="comments" cols="30" rows="10" class="textarea"></textarea>
         </ul>
-            <button type="button">Send</button>
+            <button type="button" class="send-button">Send</button>
     </section>
     <section>
-        <h3>About us</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Quaerat sequi veniam quisquam quo architecto nostrum ipsa 
-            praesentium delectus ipsum tempore, aliquid eum? 
-            Magnam illo tempore quas ea rerum perspiciatis odio.
-        </p>
+        <h3 class="about-us">About us</h3>
+            <p class="caja-texto" >Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Quaerat sequi veniam quisquam quo architecto nostrum ipsa 
+                praesentium delectus ipsum tempore, aliquid eum? 
+                Magnam illo tempore quas ea rerum perspiciatis odio.
+            </p>
     </section>
     <section>
-        <h3>Activities</h3>
-        <img src="../assets/img/crossfit-img.png" alt="crossfit" width="283" height="181">
-        <p>Crossfit</p>
-        <img src="../assets/img/functional-img.png" alt="functional" width="254" height="181">
-        <p>Functional</p>
-        <img src="../assets/img/boxing-img.png" alt="boxing" width="233" height="181">
-        <p>Boxing</p>
-        <img src="../assets/img/spinning-img.png" alt="spinning" width="268" height="211">
-        <p>Spinning</p>
-        <img src="../assets/img/fitness-img.png" alt="fitness" width="254" height="211">
-        <p>Fitness</p>
+        <h3 class="activities">Activities</h3>
+        <div class="activity-01">
+            <img src="../assets/img/crossfit-img.png" alt="crossfit" width="283" height="181">
+            <p class="activity-name">Crossfit</p>
+            <img src="../assets/img/spinning-img.png" alt="spinning" width="268" height="211">
+            <p class="activity-name">Spinning</p>
+        </div>
+        <div class="activity-02">
+            <img src="../assets/img/functional-img.png" alt="functional" width="254" height="181">
+            <p class="activity-name">Functional</p>
+            <img src="../assets/img/fitness-img.png" alt="fitness" width="254" height="211">
+            <p class="activity-name">Fitness</p>
+        </div>
+        <div class="activity-03">
+            <img src="../assets/img/boxing-img.png" alt="boxing" width="233" height="181">
+            <p class="activity-name">Boxing</p>
+        </div>
     </section>
     <section>
-        <button type="button">Membership Black</button>
-        <p>Free access to Bodybuilding</p>
-        <p>Free access to classes prior registration</p>
-        <p>Follow-up analyzed by coach</p>
-        <p>Grid display</p>
-        <button type="button">Membership Classic</button>
-        <p>Free access to the weight room</p>
-        <p>Personalized monitoring by a coach</p>
-        <p>Grid display</p>
-        <button type="button">Membership Only Classes</button>
-        <p>Personalized monitoring by a coach</p>
-        <p>Grid display</p>
+        <button type="button" class="membership-01">Membership Black</button>
+            <div class="membership-info">
+                <p>Free access to Bodybuilding</p>
+                <p>Free access to classes prior registration</p>
+                <p>Follow-up analyzed by coach</p>
+                <p>Grid display</p>
+            </div>
+        <button type="button" class="membership-02">Membership Classic</button>
+            <div class="membership-info">
+                <p>Free access to the weight room</p>
+                <p>Personalized monitoring by a coach</p>
+                <p>Grid display</p>
+            </div>
+        <button type="button" class="membership-03">Membership Only Classes</button>
+            <div class="membership-info">
+                <p>Personalized monitoring by a coach</p>
+                <p>Grid display</p>
+            </div>
     </section>
 </main>
     <footer>
+        <div class="footer">
         <a href="https://www.snapchat.com/"><img src="../assets/img/Snapchat-icon.png" alt="snapchat" width="24" height="24"></a>
         <a href="https://web.whatsapp.com/"><img src="../assets/img/WhatsApp-icon.png" alt="whatsapp" width="24" height="24"></a>
         <a href="https://www.facebook.com/"><img src="../assets/img/Facebook-icon.png" alt="facebook" width="24" height="24"></a>
@@ -168,6 +181,7 @@
         <a href="https://web.telegram.org/k/"><img src="../assets/img/Telegram-icon.png" alt="telegram" width="24" height="24"></a>
         <a href="https://www.linkedin.com/home"><img src="../assets/img/LinkedIn-icon.png" alt="linkedin" width="24" height="24"></a>
         <p>Rosario, Santa Fe. Copyright &copy; 2023 Radium Rocket. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
