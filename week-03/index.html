@@ -55,7 +55,7 @@
     <section class="screen-01">
         <h1 class="text-screen-01">Hi, and welcome to <p>Mega Rocket SA Gym</p></h1>
         <img src="../assets/img/header-main-img.png" alt="imagen inicio" width="852" height="318">
-        <h3>A FREE AND FULLY RESPONSIVE SITE TEMPLATE</h3>
+        <h2 class="text-screen-02">A FREE AND FULLY RESPONSIVE SITE TEMPLATE</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Quaerat sequi veniam quisquam quo architecto nostrum ipsa 
             praesentium delectus ipsum tempore, aliquid eum? 
@@ -67,49 +67,60 @@
             Magnam illo tempore quas ea rerum perspiciatis odio.
         </p>
     </section>
-        <img src="../assets/img/logo-img.png" alt="logo-icon" width="112" height="114">
+        <img src="../assets/img/logo-img.png" alt="logo-icon" class="logo-screen01-fixed">
+    <article class="screen-02">
+            <div class="screen-02-pair1">
+                <img src="../assets/img/appointment-img.png" alt="appointment">
+                <p class="screen-02-appointment">Appointment booking </p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Minima tempora eos quibusdam exercitationem aspernatur.</p>
+                <img src="../assets/img/management-img.png" alt="management" width="249" height="178">
+                <p>Management and Membership</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Minima tempora eos quibusdam exercitationem aspernatur.</p>
+            </div>
+            <div class="screen-02-pair2">
+                <img src="../assets/img/calendar-img.png" alt="calendar" width="145" height="166">
+                <p>Calendar and Opening Hours</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Minima tempora eos quibusdam exercitationem aspernatur.</p>
+                <img src="../assets/img/contact-form-img.png" alt="contact" width="177" height="145">
+                    <p>Contact form and suggestions</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Minima tempora eos quibusdam exercitationem aspernatur.</p>
+            </div>
+    </article>
     <section>
-        <ul>
-            <img src="../assets/img/appointment-img.png" alt="appointment" width="214" height="211">
-            <p>Appointment booking</p>
-            <img src="../assets/img/calendar-img.png" alt="calendar" width="145" height="166">
-            <p>Calendar and Opening Hours</p>
-            <img src="../assets/img/management-img.png" alt="management" width="249" height="178">
-            <p>Management and Membership</p>
-            <img src="../assets/img/contact-form-img.png" alt="contact" width="177" height="145">
-            <p>Contact form and suggestions</p>
-        </ul>
-    </section>
-    <section>
-        <h2>Registration and/or claim</h2>
-        <ul>
+        <h2 class="text-screen-03">Registration and/or claim</h2>
+        <ul class="registration-claim">
             <li>
-                <label for="Name">Name</label>
-                <input id="Name" type="text" name="firstname">
+                <label for="Name" class="text-registration">Name</label>
+                <input id="Name" type="text" name="firstname" class="text-registration-area">
             </li>
             <li>
-                <label for="Last Name">Lastname</label>
-                <input id="Last Name" type="text" name="lastname">
+                <label for="Last Name" class="text-registration">Lastname</label>
+                <input id="Last Name" type="text" name="lastname" class="text-registration-area">
             </li>
             <li>
-                <label for="Email">Email</label>
-                <input id="Email" type="text" name="email">
+                <label for="Email" class="text-registration">Email</label>
+                <input id="Email" type="text" name="email" class="text-registration-area">
             </li>
+            <div class="radio-reclaim">
                 <form action="/action_page.php">
-                    <input type="checkbox" id="cost" name="membership-and-cost" value="Cost">
+                    <input type="radio" id="cost" name="membership-and-cost" value="Cost">
                     <label for="cost"> I want to know memberships and costs</label>
                 </form>
                 <form action="/action_page.php">
-                    <input type="checkbox" id="question" name="question-and-suggestion" value="question">
+                    <input type= "radio" id="question" name="question-and-suggestion" value="question">
                     <label for="question"> I want to make a question or suggestion</label>
                 </form>
                 <form action="/action_page.php">
-                    <input type="checkbox" id="claim" name="claim" value="claim">
+                    <input type="radio" id="claim" name="claim" value="claim">
                     <label for="claim"> I want to make a claim</label>
                 </form>
-            <p>Comments</p>
-            <label for="message"></label>
-            <textarea name="Comments" id="comments" cols="30" rows="10"></textarea>
+            </div>
+            <p class="textarea-screen03">Comments</p>
+            <textarea name= "Comments" id="comments" cols="30" rows="10" class="textarea"></textarea>
         </ul>
             <button type="button">Send</button>
     </section>
