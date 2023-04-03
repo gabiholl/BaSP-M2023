@@ -1,7 +1,8 @@
 
 *.container-body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #fff;
+    @import url("https://fonts.googleapis.com/css2?family=Alice&family=Dancing+Script&family=Montserrat&family=PT+Serif&family=Poppins:wght@200;400&family=Roboto&display=swap%22");
 }
 
 /*header*/
@@ -26,6 +27,7 @@
     height: 100%;
     top: 118px;
     left: 0;
+    text-align: center;
 }
 
 .aside-list{
@@ -77,12 +79,11 @@
 
 .subtitle-info{
     color: #000;
-    position:sticky;
     width: 109px;
-    text-align: center;
     font-size: 20px;
-    top: 512px;
-    left: 103px;
+    display: inline-block;
+    text-align: center;
+    margin-top: 139px;
 }
 
 .information-list{
@@ -103,13 +104,11 @@
     font-size: 14px;
     display: inline-block;
     vertical-align: middle;
-    position: fixed;
-    left: 80px;
 }
 
 /*Screen-01*/
 
-*.container-main{
+.container-main{
 text-align: center;
 margin-top: 118px;
 margin-left: 335px;
@@ -142,19 +141,62 @@ text-align: center;
     right: 10px;
 }
 
-.screen-02{
-    display: flex;
-    justify-content: space-evenly;
+.screen-a{
+    display: inline-block;
+    width: 220px;
+    margin-left: 200px;
+    margin-right: 75px;
+    margin-top: 24px;
+    margin-bottom: 75px;
 }
 
-.screen-02-pair1{
-    justify-content: space-between;
-    margin-bottom: 50px;
+.img-01{
+    width: 214px;
+    height: 211px;
+    top: 1060px;
+    left: 540px;
 }
 
-.screen-02-pair2{
-    margin-top: 20px;
-    justify-content: space-between;
+.img-02{
+    width: 145px;
+    height: 167px;
+    top: 1083px;
+    left: 1045px;
+}
+
+.img-03{
+    width: 249px;
+    height: 179px;
+    top: 1362px;
+    left: 530px;
+}
+
+.img-04{
+    width: 177px;
+    height: 145px;
+    top: 1378px;
+    left: 1029px;
+}
+
+.name-01{
+    display: inline-block;
+    width: 194px;
+    height: 16px;
+    left: 1000px;
+    top: 1200px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.text-name{
+    display: inline-block;
+    width: 270px;
+    height: 42px;
+    left: 1000px;
+    top: 1200px;
+    font-size: 14px;
+    text-align: center;
 }
 
 /*registration and claims*/
@@ -221,12 +263,18 @@ text-align: center;
 }
 
 .caja-texto{
-    width: 400px;
-    height: 200px;
+    background-color: rgba(170,206,155,0.1);
     border-radius: 5px;
     border-color: #000;
-    margin-left: 260px;
+    margin-top: 80px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 30px;
     text-align: center;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    padding-right: 80px;
+    padding-left: 80px;
 }
 
 /*Activities*/
@@ -240,29 +288,16 @@ text-align: center;
 }
 
 .activity-name{
-    margin-top: 196px;
-    margin-bottom: 90px;
+    margin-top: 10px;
+    margin-bottom: 55px;
     font-size: 16px;
     font-weight: bold;
-    padding-left: 30px;
+    padding-left: 10px;
 }
 
-.activity-01{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-}
-
-.activity-02{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-}
-
-.activity-03{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
+.activity{
+    display: inline-block;
+    width: 30%;
 }
 
 /*membership*/
@@ -313,4 +348,8 @@ text-align: center;
     width: 100%;
     text-align: center;
     margin-top: 50px;
+}
+
+.footer p{
+    display: inline-block;
 }
