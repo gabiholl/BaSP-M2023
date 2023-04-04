@@ -7,26 +7,28 @@
 
 /*header*/
 .header{
-    background-color: #373867;
-    color: #fff;
     position: fixed;
     width: 100%;
     height: 118px;
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
     top: 0;
     left: 0;
+    background-color: #373867;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+
 }
+
 
 /*aside*/
 .container-aside{
-    background-color:#F6F6F6;
     position: fixed;
     width: 335px;
     height: 100%;
     top: 118px;
     left: 0;
+    background-color:#F6F6F6;
     text-align: center;
 }
 
@@ -35,20 +37,20 @@
 }
 
 .container-search{
-    background-color: #fff;
+    position: relative;
     width: 255px;
     height: 36px;
-    position: relative;
+    background-color: #fff;
     border-radius: 4px;
 }
 
 .icon-search{
-    color: black;
+    position: absolute;
     width: 24px;
     height: 24px;
-    position: absolute;
     right: 28px;
     top: 20px;
+    color: black;
 }
 
 .aside-list li{
@@ -56,24 +58,24 @@
 }
 
 .button-aside{
+    display: inline-block;
     width: 24px;
     height: 24px;
-    color: black;
     margin-top: 10px;
     margin-right: 20px;
-    display: inline-block;
+    color: black;
     vertical-align: middle;
 }
 
 .button-container{
-    background-color: #AACE9B;
-    border: #F6F6F6;
+    display: inline-block;
     width: 238px;
     height: 49px;
+    background-color: #AACE9B;
+    border: #F6F6F6;
     border-radius: 10px;
     font-weight: bold;
     font-size: 20px;
-    display: inline-block;
     vertical-align: middle;
 }
 
@@ -87,8 +89,8 @@
 }
 
 .info-box a{
-    text-decoration: none;
     color: #000;
+    text-decoration: none;
 }
 
 ul li{
@@ -110,9 +112,9 @@ ul li{
 /*Screen-01*/
 
 .container-main{
-text-align: center;
 margin-top: 118px;
 margin-left: 335px;
+text-align: center;
 }
 
 .screen-01{
@@ -120,17 +122,17 @@ text-align: center;
 }
 
 .text-screen-01{
+    margin-top: 150px;
     color: #373867;
     text-align:center;
-    margin-top: 150px;
     font-size: 48px;
     font-weight: bold;
 }
 
 .text-screen-02{
+    margin-top: 50px;
     color: #373867;
     text-align:center;
-    margin-top: 50px;
     font-size: 48px;
     font-weight: bold;
 }
@@ -141,9 +143,9 @@ text-align: center;
 }
 
 .logo-screen01-fixed{
+    position: fixed;
     width: 87px;
     height: 81px;
-    position: fixed;
     right: 10px;
 }
 
@@ -205,12 +207,13 @@ text-align: center;
     text-align: center;
 }
 
+
 /*registration and claims*/
 .text-screen-03{
     color: #373867;
-    text-align:center;
     font-size: 40px;
     font-weight: bold;
+    text-align:center;
 }
 
 .registration-claim{
@@ -218,29 +221,29 @@ text-align: center;
 }
 
 .text-registration{
-    text-align:center;
-    font-size: 20px;
+    display: block;
     padding-top: 36px;
     padding-bottom: 10px;
-    display: block;
+    font-size: 20px;
+    text-align:center;
 }
 
 .text-registration-area{
-    color: #D9D9D9;
     width: 386px;
     height: 44px;
+    color: #D9D9D9;
 }
 
 .radio-reclaim{
-    text-align: left;
     margin-top: 30px;
     padding-left: 270px;
+    text-align: left;
 }
 
 .textarea-screen03{
+    padding-left: 300px;
     text-align: left;
     font-size: 13px;
-    padding-left: 300px;
 }
 
 .textarea{
@@ -249,62 +252,64 @@ text-align: center;
 }
 
 .send-button{
-    background-color: #AACE9B;
     width: 110px;
     height: 33px;
+    background-color: #AACE9B;
     border-radius: 4px;
     border-color: #AACE9B;
     font-size: 16px;
     font-weight: bold;
 }
 
+
 /*About us*/
 
 .about-us{
+    margin-top: 200px;
     color: #373867;
     text-align:center;
     font-size: 40px;
     font-weight: bold;
-    margin-top: 200px;
 }
 
 .caja-texto{
-    background-color: rgba(170,206,155,0.1);
-    border-radius: 5px;
-    border-color: #000;
     margin-top: 80px;
     margin-left: 200px;
     margin-right: 200px;
     margin-bottom: 30px;
-    text-align: center;
     padding-bottom: 100px;
     padding-top: 100px;
     padding-right: 80px;
     padding-left: 80px;
+    background-color: rgba(170,206,155,0.1);
+    border-radius: 5px;
+    border-color: #000;
+    text-align: center;
 }
 
 /*Activities*/
 
 .activities{
+    margin-top: 200px;
     color: #373867;
-    text-align:center;
     font-size: 40px;
     font-weight: bold;
-    margin-top: 200px;
+    text-align:center;
 }
 
 .activity-name{
     margin-top: 10px;
     margin-bottom: 55px;
+    padding-left: 10px;
     font-size: 16px;
     font-weight: bold;
-    padding-left: 10px;
 }
 
 .activity{
     display: inline-block;
     width: 30%;
 }
+
 
 /*membership*/
 
@@ -314,6 +319,7 @@ text-align: center;
     border-radius: 5px;
     background-color: #2A2A32;
     color: #fff;
+    border-radius: 5px;
     font-size: 20px;
     font-weight: bold;
 }
@@ -321,10 +327,10 @@ text-align: center;
 .membership-02{
     width: 311px;
     height: 40px;
-    border-radius: 5px;
     background-color: #CCCBCB;
-    border-color: #CCCBCB;
     color: #000;
+    border-color: #CCCBCB;
+    border-radius: 5px;
     font-size: 20px;
     font-weight: bold;
 }
@@ -332,29 +338,29 @@ text-align: center;
 .membership-03{
     width: 311px;
     height: 40px;
-    border-radius: 5px;
     background-color: #EDEDED;
-    border-color:#EDEDED;
     color: #000;
+    border-color:#EDEDED;
+    border-radius: 5px;
     font-size: 20px;
     font-weight: bold;
 }
 
 .membership-info{
-    text-align: left;
     margin-left: 350px;
     margin-bottom: 80px;
+    text-align: left;
 }
 
 /*footer*/
 
 .footer{
-    left: 0;
-    bottom: 0;
     width: 100%;
-    text-align: center;
     margin-top: 50px;
     margin-left: 150px;
+    left: 0;
+    bottom: 0;
+    text-align: center;
 }
 
 .footer p{
