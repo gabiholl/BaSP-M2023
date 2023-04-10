@@ -3,3 +3,44 @@
     background-color: #fff;
     @import url("https://fonts.googleapis.com/css2?family=Alice&family=Dancing+Script&family=Montserrat&family=PT+Serif&family=Poppins:wght@200;400&family=Roboto&display=swap%22");
 }
+
+.container-main{
+    margin-top: 0;
+    margin-left: 335px;
+    text-align: center;
+    }
+
+    /*appontment-calendar-management-contact form*/
+    .img-01{
+        width: 214px;
+        height: 211px;
+
+    }
+    
+    .img-02{
+        width: 145px;
+        height: 167px;
+        top: 1083px;
+        left: 1045px;
+    }
+    
+    .img-03{
+        width: 249px;
+        height: 179px;
+        top: 1362px;
+        left: 530px;
+    }
+    
+    .img-04{
+        width: 177px;
+        height: 145px;
+        top: 1378px;
+        left: 1029px;
+    }
+/*
+    .img{
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        align-content: center;
+    }

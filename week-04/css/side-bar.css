@@ -1,7 +1,9 @@
 .container-aside{
+    position: fixed;
     width: 335px;
-    height: 100%;
+    height: 5586px;
     background-color:#F6F6F6;
+    top: 118px;
 }
 
 .aside-list{
@@ -27,9 +29,13 @@
 }
 
 .icon-search{
+    position: absolute;
     width: 24px;
     height: 24px;
-    padding: 10px;
+    right: 28px;
+    left: 266px;
+    top: 15px;
+    color: black;
 }
 
 .icon-sidebar{
