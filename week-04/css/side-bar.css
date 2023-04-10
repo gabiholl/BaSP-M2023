@@ -1,4 +1,6 @@
+
 .container-aside{
+    display: none;
     position: fixed;
     width: 335px;
     height: 5586px;
@@ -7,7 +9,7 @@
 }
 
 .aside-list{
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     align-self: center;
@@ -20,6 +22,7 @@
 }
 
 .container-search{
+    display: none;
     width: 255px;
     height: 36px;
     margin-top: 10px;
@@ -55,6 +58,7 @@
 }
 
 .subtitle-info{
+    display: none;
     text-align: center;
     font-size: 20px;
     font-weight: 700;
@@ -63,7 +67,7 @@
 }
 
 .information-list{
-    display: flex;
+    display: none;
     flex-direction: column;
     list-style: none;
     margin-left: 20px;

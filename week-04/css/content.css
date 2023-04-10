@@ -50,12 +50,27 @@
 
 .screen-a{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-end;
     align-content: center;
 }
 
 .appointment{
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar{
+    display: flex;
+    flex-direction: column;
+}
+
+.management{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact{
     display: flex;
     flex-direction: column;
 }
@@ -130,3 +145,102 @@
     font-size: 16px;
     font-weight: bold;
 }
+
+.about-us h3{
+    margin-top: 80px;
+    color: #373867;
+    text-align:center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.about-us p{
+    margin-top: 80px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 30px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    padding-right: 80px;
+    padding-left: 80px;
+    background-color: rgba(170,206,155,0.1);
+    border-radius: 5px;
+    border-color: #000;
+    text-align: center;
+    font-size: 14px;
+}
+
+.activities h3{
+    margin-top: 200px;
+    margin-bottom: 40px;
+    color: #373867;
+    font-size: 40px;
+    font-weight: bold;
+    text-align:center;
+}
+
+.activities p{
+    margin-top: 10px;
+    margin-bottom: 55px;
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.order{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.membership{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.black{
+    background-color: #2A2A32;
+    color: #fff;
+    width: 311px;
+    height: 40px;
+    border-radius: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.classic{
+    background-color: #CCCBCB;
+    color: #000;
+    border-color: #CCCBCB;
+    width: 311px;
+    height: 40px;
+    border-radius: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.classes{
+    background-color: #EDEDED;
+    color: #000;
+    border-color:#EDEDED;
+    width: 311px;
+    height: 40px;
+    border-radius: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.membership p{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+
