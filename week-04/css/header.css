@@ -1,13 +1,13 @@
 
 @media screen and (min-width: 600px){
     .header{
+        display: none;
+        justify-content: center;
+        align-items: center;
         position: fixed;
         width: 100%;
         height: 118px;
         background-color: #373867;
-        display: none;
-        justify-content: center;
-        align-items: center;
         font-size: 40px;
         font-weight: bold;
         color: #fff;
@@ -18,13 +18,13 @@
 
 @media screen and (min-width: 1000px){
     .header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: fixed;
         width: 100%;
         height: 118px;
         background-color: #373867;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         font-size: 40px;
         font-weight: bold;
         color: #fff;
