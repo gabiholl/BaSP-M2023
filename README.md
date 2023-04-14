@@ -18,6 +18,10 @@ For the second week I have been working with HTML, it was my first time using Gi
 
 In the third week I have been working with HTML, CSS, Git and Github. I tried to do my best to make the page pixel perfect just like we did in figma, I have some issues with CSS but I'll improve.
 
+## Week-04
+
+In the fourth week I have been working with flex and flexbox in mobile first and responsive design, I have modified HTML and CSS, I also continue working with Git and Github. I had some difficulties to understand the use of media queries but I was able to do it.
+
 ## Sections
 
 - Home
