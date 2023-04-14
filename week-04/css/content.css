@@ -2,7 +2,6 @@
     font-family: sans-serif;
 }
 
-
 /* image, title, subtitle, lorem*/
 .main{
     display: flex;
@@ -288,8 +287,8 @@
         }
 
     .image{
-        width: 700px;
-        height: 318px;
+        width: 900px;
+        height: 350px;
         margin-top: 10px;
         order: unset;
     }
