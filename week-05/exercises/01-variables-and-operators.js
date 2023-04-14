@@ -18,6 +18,7 @@ console.log('Ella es ' + nombre_completo);
 //c. Crear dos variables de tipo String y sumar el largo de cada variable (cantidad de letras del string) 
 //guardando el resultado de la suma en una 3er variable (utilizar length).
 
+console.log("-Exercise 1.c")
 var nombre = "Silvio";
 var apellido = "Gómez";
 var cantidad = (nombre+apellido).length
