@@ -17,9 +17,8 @@ console.log("-Exercise 5.b")
 var frutas = ["manzana","banana","frutilla","pera","kiwi"]
 for(var index = 0; index < frutas.length; index++){
     console.log(frutas[index].substring(0,1).toUpperCase() + frutas[index].substring(1).toLowerCase());
-    //preguntar por alert a nico
 }
-
+alert(sentence);
 //c. Crear una variable llamada “sentence” que tenga un string vacío, luego al array del punto 
 //a) recorrerlo con un bucle for para ir guardando cada palabra dentro de la variable sentence. 
 //Al final mostrar una única alerta con la cadena completa.
@@ -29,9 +28,8 @@ console.log("-Exercise 5.c")
 var sentence = " ";
 for (var index = 0; index < frutas.length; index++){
 sentence += frutas[index] + " ";
-    
 }
-console.log(sentence)
+alert(sentence);
 
 //d. Crear un array vacío y con un bucle for de 10 repeticiones. 
 //Llenar el array con el número de la repetición, es decir que al final de la ejecución del bucle 
