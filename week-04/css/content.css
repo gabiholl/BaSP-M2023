@@ -2,11 +2,22 @@
     font-family: sans-serif;
 }
 
+.separador{
+    display: flex;
+    width: 400px;
+    height: 5px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    background-color: #BEBEBE;
+}
+
 /* image, title, subtitle, lorem*/
-.main{
+main{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .image{
@@ -124,7 +135,7 @@
 
 .radio-reclaim{
     margin-top: 30px;
-    padding-left: 300px;
+    padding-left: 47px;
     text-align: left;
 }
 
@@ -149,7 +160,7 @@
     width: 110px;
     height: 33px;
     margin-top: 25px;
-    margin-left: 445px;
+    margin-left: 190px;
     background-color: #AACE9B;
     border-radius: 4px;
     border-color: #AACE9B;
@@ -215,6 +226,7 @@
 }
 
 /*membership*/
+
 .membership{
     display: flex;
     flex-direction: column;
@@ -297,8 +309,8 @@
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        margin-left: 120px;
-        max-width: 80%;
+        margin-left: 10pxpx;
+        max-width: 90%;
     }
     .screen-a p{
         display: flex;

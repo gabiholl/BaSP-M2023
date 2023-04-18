@@ -5,7 +5,7 @@
 }
 
 .menu-mobile img{
-    display: flex;
+    position: static;
 }
 
 .container-main{
@@ -69,8 +69,7 @@
 }
 
 .logo-screen01-fixed{
-    width: 87px;
-    height: 81px;
+    align-self: center;
 }
 
 /*media queries*/
@@ -90,7 +89,7 @@
         position: fixed;
         width: 87px;
         height: 81px;
-        margin-top: 530px;
+        bottom: 10px;
         right: 10px;
     }
 
