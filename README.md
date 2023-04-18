@@ -22,6 +22,10 @@ In the third week I have been working with HTML, CSS, Git and Github. I tried to
 
 In the fourth week I have been working with flex and flexbox in mobile first and responsive design, I have modified HTML and CSS, I also continue working with Git and Github. I had some difficulties to understand the use of media queries but I was able to do it.
 
+## Week-05
+
+For the fifth week I had to solve exercises in javascript given by radium and correct errors from week 4 from the feedback of the tutor.
+
 ## Sections
 
 - Home
