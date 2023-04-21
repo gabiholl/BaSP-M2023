@@ -1,0 +1,405 @@
+.body{
+    font-family: sans-serif;
+}
+
+.separador{
+    display: flex;
+    width: 400px;
+    height: 5px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    background-color: #BEBEBE;
+}
+
+/* image, title, subtitle, lorem*/
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.image{
+    width: 510px; 
+    height: 360px;
+    order: -1;
+}
+
+.main div h1{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 33px;
+    margin-right: 268px;
+    margin-left: 248px;
+    color: #373867;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    height: 245px;
+}
+
+.text-screen{
+    margin-top: 120px;
+    color: #373867;
+    text-align:center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.text-screen-main{
+    display: flex;
+    margin-top: 30px;
+    margin-right: 250px;
+    margin-left: 250px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/*Appointment, calendar, management, contact*/
+.screen-a{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+
+}
+
+.appointment{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.calendar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.management{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.contact{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.screen-a h3{
+    margin-bottom: 20px;
+    align-content: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.screen-a p{
+    display: none;
+    width: 270px;
+    height: 42px;
+    font-size: 18px;
+    text-align: center;
+    text-justify: inter-word;
+}
+
+/*registration*/
+.registration h2{
+    margin-top: 150px;
+    color: #373867;
+    font-size: 40px;
+    font-weight: bold;
+    text-align:center;
+}
+
+.registration ul li label{
+    display: block;
+    padding-top: 36px;
+    padding-bottom: 10px;
+    font-size: 22px;
+    text-align:center;
+}
+
+.registration ul li input{
+    width: 386px;
+    height: 44px;
+    background-color: #D9D9D9;
+    border-color: #D9D9D9;
+}
+
+.radio-reclaim{
+    margin-top: 30px;
+    padding-left: 47px;
+    text-align: left;
+}
+
+.textarea-screen03{
+    margin: 20px;
+    padding-left: 250px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.textarea{
+    width: 364px;
+    height: 138px;
+    background-color: #D9D9D9;
+    border-color: #D9D9D9;
+}
+
+.send-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 33px;
+    margin-top: 25px;
+    margin-left: 190px;
+    background-color: #AACE9B;
+    border-radius: 4px;
+    border-color: #AACE9B;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/*about us*/ 
+
+.about-us h3{
+    margin-top: 120px;
+    color: #373867;
+    text-align:center;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.about-us p{
+    margin-top: 80px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 30px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    padding-right: 80px;
+    padding-left: 80px;
+    background-color: rgba(170,206,155,0.1);
+    border-radius: 5px;
+    border-color: #000;
+    text-align: center;
+    font-size: 18px;
+}
+
+/*activities*/
+.activities h3{
+    margin-top: 200px;
+    margin-bottom: 40px;
+    color: #373867;
+    font-size: 40px;
+    font-weight: bold;
+    text-align:center;
+}
+
+.activities p{
+    margin-top: 10px;
+    margin-bottom: 55px;
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.order{
+    display: flex;
+    flex-direction: column;
+}
+
+.order div{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin: 35px;
+}
+
+/*membership*/
+
+.membership{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.black{
+    width: 311px;
+    height: 40px;
+    background-color: #2A2A32;
+    color: #fff;
+    border-radius: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.classic{
+    width: 311px;
+    height: 40px;
+    background-color: #CCCBCB;
+    color: #000;
+    border-color: #CCCBCB;
+    border-radius: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.classes{
+    width: 311px;
+    height: 40px;
+    background-color: #EDEDED;
+    color: #000;
+    border-color:#EDEDED;
+    border-radius: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.membership p{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+@media screen and (min-width: 1024px){
+
+    .container-main{
+        margin-top: 118px;
+        margin-left: 335px;
+        text-align: center;
+        }
+
+    .main div h1{
+        display: flex;
+        flex-direction: column;
+        height: 245px;
+        margin-top: 33px;
+        margin-right: 114px;
+        margin-left: 102px;
+        color: #373867;
+        text-align: center;
+        font-size: 70px;
+        font-weight: bold;
+        }
+
+    .image{
+        width: 900px;
+        height: 350px;
+        margin-top: 10px;
+        order: unset;
+    }
+
+    .screen-a{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-left: 10pxpx;
+        max-width: 90%;
+    }
+    .screen-a p{
+        display: flex;
+        width: 270px;
+        height: 42px;
+        font-size: 18px;
+        text-align: center;
+        text-justify: inter-word;
+    }
+
+    .registration{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .radio-reclaim{
+        display: flex;
+        flex-direction: column;
+        margin-right: 300px;
+        text-align: left;
+    }
+
+    .registration .send-button{
+        margin-left: 40px;
+    }
+
+    .text-screen{
+        margin-top: 26px;
+        color: #373867;
+        text-align:center;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .textarea-screen03{
+        margin: 20px;
+    }
+
+    .text-screen-main{
+        display: flex;
+        margin-top: 30px;
+        margin-right: 24px;
+        margin-left: 20px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .about-us h3{
+        display: flex;
+        flex-direction: column;
+        margin-top: 180px;
+        color: #373867;
+        text-align:center;
+        font-size: 60px;
+        font-weight: bold;
+        
+    }
+
+    /*activities*/
+
+    .activities h3{
+        margin-top: 200px;
+        margin-bottom: 40px;
+        color: #373867;
+        font-size: 40px;
+        font-weight: bold;
+        text-align:center;
+    }
+    
+    .activities p{
+        margin-top: 10px;
+        margin-bottom: 55px;
+        padding-left: 10px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .order{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-left: 170px;
+        max-width: 70%;
+        align-items: center;
+    }
+    .order div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 20px;
+    }
+}
