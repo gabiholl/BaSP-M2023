@@ -13,7 +13,10 @@
     </header>
     <main class="container-main">
         <div>
-            <img src="/assets/img/back-icon.png" alt="back" class="back-icon">
+            <a href="/week-06/views/index.html"><img src="/assets/img/back-icon.png" alt="back" class="back-icon"></a>
+        </div>
+        <div class="errorAlert">
+            <label for="error-alert">Oops! Your email or password is incorrect. Please try again</label>
         </div>
         <h1 class="login-text">Log In</h1>
         <img src="/assets/img/logo-img.png" alt="logo-icon" class="logo-icon">
@@ -21,11 +24,16 @@
             <ul>
                 <li>
                     <label for="email">Email</label>
-                    <input id="Email" type="text" placeholder="sarawilliams@gmail.com" name="email" class="email">
+                    <input id="email" type="email" placeholder="sarawilliams@mail.com" name="email" class="login-inputs">
+                    <p class="error-msg" id="email-error-msg">The email format is not valid.</p>
                 </li>
                 <li>
                     <label for="password">Password</label>
-                    <input id="Password" type="text" name="password" class="password">
+                    <input id="password" type="password" name="password" class="login-inputs">
+                    <div class="error-msg" id="password-error-msg">
+                        Password must contain:
+                        at least 8 characters, including 1 lowercase, 1 uppercase and 1 number
+                    </div>
                 </li>
             </ul>
         </section>
@@ -39,8 +47,10 @@
         </div>
         <div class="register">
             <p>Are you new here?</p>
-            <a href="register" class="register">Register</a>
+            <a href="/week-06/views/sign-up.html" class="register">Register</a>
         </div>
     </main>
+
+    <script src="../js/login.js"></script>
 </body>
 </html>

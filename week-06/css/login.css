@@ -37,14 +37,47 @@
     height: 30px;
 }
 
+.errorAlert{
+    display: none;
+    margin-top: 120px;
+    padding: 20px;
+    background-color: red;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+}
+
+/* .errorAlertActive{
+    display: flex;
+    margin-top: 120px;
+    padding: 20px;
+    background-color: red;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+} */
+
 .login-text{
     width: 100%;
     height: 45px;
     font-size: 40px;
     font-weight: bold;
     color: #000;
-    margin-top: 200px;
+    margin-top: 150px;
+    align-items: center;
+    text-align: center;
 }
+
+/* .login-text-error{
+    width: 100%;
+    height: 45px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+} */
 
 .logo-icon{
     display: flex;
@@ -58,9 +91,10 @@
     list-style:none;
 }
 
+
 .data ul li label{
     list-style: none;
-    display: flex;
+    display: none;
     margin-top: 25px;
     margin-left: 0px;
     padding-bottom: 10px;
@@ -69,14 +103,43 @@
     text-align:left;
 }
 
-.email{
-    width: 260px;
+.data ul li label{
+    list-style: none;
+    display: flex;
+    margin-top: 25px;
+    margin-left: 0px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.login-inputs{
+    width: 350px;
     height: 40px;
 }
 
-.password{
-    width: 260px;
+.errors{
+    width: 350px;
     height: 40px;
+    border-color: red;
+    border-radius: 4px;
+}
+
+.error-msg{
+    white-space: pre-line;
+    display: none;
+    color: red;
+    font-weight: bold;
+    font-size: 10px;
+    text-align: left;
+}
+
+.border-correct{
+    width: 350px;
+    height: 40px;
+    border-color: green;
+    border-radius: 4px;
 }
 
 .remember{

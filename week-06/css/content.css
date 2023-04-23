@@ -310,7 +310,7 @@ main{
         flex-direction: row;
         justify-content: space-evenly;
         margin-left: 10pxpx;
-        max-width: 90%;
+        max-width: 100%;
     }
     .screen-a p{
         display: flex;
