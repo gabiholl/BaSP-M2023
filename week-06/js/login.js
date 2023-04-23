@@ -1,6 +1,8 @@
+var InputValue = [];
+
 var emailInput = document.getElementById("email");
 var passInput = document.getElementById("password");
-var loginBtn = document.getElementsByClassName ("continue");
+// var loginBtn = document.getElementsByClassName("continue");
 
 //Error Msgs
 var errorMsgs = document.getElementsByClassName("error-msg")
@@ -12,8 +14,6 @@ var passErrorMsg = document.getElementById("password-error-msg")
 
 //Email validation
 var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-var InputValue = [];
-
 
 emailInput.onblur = function () {
     if (!emailExpression.test(emailInput.value)) {
@@ -47,13 +47,14 @@ passInput.onblur = function () {
             hasBigLetter = true;
         if(charCode > 96 && charCode < 123)
             hasSmallLetter = true;
-        if(hasBigLetter && hasSmallLetter && hasNumber) {
+        if(!hasBigLetter && !hasSmallLetter && !hasNumber) {
+            passInput.classList.add("errors");
+            passErrorMsg.style.display = "flex";
+        } else {
             passInput.classList.add("border-correct");
             passInput.classList.remove("errors");
             passErrorMsg.style.display = "none";
-        } else {
-            passInput.classList.add("errors");
-            passErrorMsg.style.display = "flex";
+            InputValue[1] = passInput.value;
         }
     }
 }
@@ -62,4 +63,16 @@ passInput.onfocus = function () {
     passInput.classList.remove("errors");
     passInput.classList.remove("border-correct");
     passErrorMsg.style.display = "none";
+}
+
+
+//Continue button validation
+
+var loginBtn = document.getElementById("submitBtn");
+loginBtn.onclick = function(e){
+    e.preventDefault();
+    if(InputValue.includes(emailInput.value) && InputValue.includes(passInput.value))
+        console.log("login")
+        alert('Welcome!' + '\n' + 'Email: ' + InputValue[0] + '\n' +
+            'Password ' + InputValue[1])
 }

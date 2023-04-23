@@ -82,6 +82,29 @@
         border-width: 1px;
     }
 
+    .errors{
+        width: 350px;
+        height: 40px;
+        border-color: red;
+        border-radius: 4px;
+    }
+
+    .error-msg{
+        white-space: pre-line;
+        display: none;
+        color: red;
+        font-weight: bold;
+        font-size: 10px;
+        text-align: left;
+    }
+    
+    .border-correct{
+        width: 350px;
+        height: 40px;
+        border-color: green;
+        border-radius: 4px;
+    }
+
     .continue{
         display: flex;
         justify-content: center;
@@ -190,6 +213,29 @@
         padding: inherit;
     }
 
+
+    .errors{
+        width: 350px;
+        height: 40px;
+        border-color: red;
+        border-radius: 4px;
+    }
+
+    .error-msg{
+        white-space: pre-line;
+        display: none;
+        color: red;
+        font-weight: bold;
+        font-size: 10px;
+        text-align: left;
+    }
+    
+    .border-correct{
+        width: 350px;
+        height: 40px;
+        border-color: green;
+        border-radius: 4px;
+    }
 
     .continue{
         display: flex;
