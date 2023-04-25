@@ -75,7 +75,6 @@ nameInput.onfocus = function () {
     nameErrorMsg.style.display = "none";
 }
 
-//dos bucles for anidados
 
 //Lastname validation
 var lastNameInput = document.getElementById("lastname");
@@ -101,7 +100,7 @@ lastNameInput.onfocus = function () {
     lastNameErrorMsg.style.display = "none";
 }
 
-//Name validation
+//dni validation
 var dniInput = document.getElementById("dni");
 dniInput.onblur = function () {
     dniValue = dniInput.value;
@@ -117,7 +116,7 @@ dniInput.onblur = function () {
             dniErrorMsg.style.display = "flex";
         } else {
             console.log("pasob");
-            dniInput.classList.add("border-correct");
+            dniInput.classList.add(".border-correct");
             dniInput.classList.remove("errors");
             dniErrorMsg.style.display = "none";
             InputValue[2] = dniValue;
@@ -131,6 +130,28 @@ dniInput.onfocus = function () {
     dniInput.classList.remove("border-correct");
     dniErrorMsg.style.display = "none";
 }
+
+//date of birth validation
+
+var dateInput = document.getElementById("date-of-birth");
+dateInput.onblur = function () {
+var validatedDate =  date.value.split("-", 3);
+    if (date.value.length == 0){
+        dateInput.classList.add("errors");
+        dateErrorMsg.style.display = "flex";
+    } else if (validatedDate[0] > 2023) {
+        dateInput.classList.remove("errors");
+        dateInput.classList.add(".border-correct");
+        dateErrorMsg.style.display = "none";
+    }
+}
+
+    dateInput.onfocus = function () {
+        console.log("focus");
+        dateInput.classList.remove("errors");
+        dateInput.classList.remove("border-correct");
+        dateErrorMsg.style.display = "none";
+    }
 
 
 //Email validation
@@ -187,6 +208,7 @@ passInput.onfocus = function () {
     repeatErrorMsg.style.display = "none";
 }
 
+//repeat password
 repeatInput.onblur = function () {
     var passValue = passInput.value;
     var repeatPass = repeatInput.value;
@@ -293,6 +315,8 @@ stateInput.onfocus = function () {
     stateErrorMsg.style.display = "none";
 }
 
+
+//postal code validation
 postalInput.onblur = function () {
     var postal = postalInput.value;
     var hasNumber = false;
@@ -319,6 +343,8 @@ postalInput.onfocus = function () {
     postalErrorMsg.style.display = "none";
 }
 
+
+//phone number validation
 phoneInput.onblur = function () {
     var phone = phoneInput.value;
     var hasNumber = false;
