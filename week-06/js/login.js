@@ -71,9 +71,13 @@ passInput.onfocus = function () {
 
 var loginBtn = document.getElementById("submitBtn");
 loginBtn.onclick = function(e){
+    var sentence = "One or more fields are empty. Please fill them out.";
     e.preventDefault();
-    if(InputValue.includes(emailInput.value) && InputValue.includes(passInput.value))
+    if (emailInput.value === ''|| passInput.value === '') {
+        alert(sentence)
+    } else if(InputValue.includes(emailInput.value) && InputValue.includes(passInput.value)) {
         console.log("login")
         alert('Welcome!' + '\n' + 'Email: ' + InputValue[0] + '\n' +
             'Password ' + InputValue[1])
+    }
 }

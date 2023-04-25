@@ -34,27 +34,6 @@ var loginBtn = document.getElementById("submitBtn");
 //Name validation
 var nameInput = document.getElementById("name");
 nameInput.onblur = function () {
-    // nameValue = nameInput.value;
-    // var hasSmallLetter = false;
-    // var hasBigLetter = false;
-    // // var hasMoreThan3Char = false;
-    // for (var i = 0; i < nameValue.length; i++) {
-    //     var char = nameValue.charAt(i);
-    //     if (char === char.toUpperCase()) {
-    //     hasBigLetter = true;
-    //     } else if (char === char.toLowerCase()) {
-    //     hasSmallLetter = true;
-    //     } 
-    //     if (!hasSmallLetter || !hasBigLetter) {
-    //         nameInput.classList.add("errors");
-    //         nameErrorMsg.style.display = "block";
-    //     } else {
-    //         nameInput.classList.add("border-correct");
-    //         nameInput.classList.remove("errors");
-    //         nameErrorMsg.style.display = "none";
-    //         InputValue[0] = nameInput.value;
-    //     }
-    // }
     if (nameInput.value.length < 4) {
         console.log("pasoa");
         nameInput.classList.add("errors");
@@ -135,14 +114,15 @@ dniInput.onfocus = function () {
 
 var dateInput = document.getElementById("date-of-birth");
 dateInput.onblur = function () {
-var validatedDate =  date.value.split("-", 3);
-    if (date.value.length == 0){
+var validatedDate =  dateInput.value.split("-", 3);
+    console.log(validatedDate)
+    if (dateInput.value.length == 0){
         dateInput.classList.add("errors");
         dateErrorMsg.style.display = "flex";
     } else if (validatedDate[0] > 2023) {
-        dateInput.classList.remove("errors");
-        dateInput.classList.add(".border-correct");
-        dateErrorMsg.style.display = "none";
+        dateInput.classList.add("errors");
+        dateInput.classList.remove(".border-correct");
+        dateErrorMsg.style.display = "flex";
     }
 }
 
@@ -371,3 +351,52 @@ phoneInput.onfocus = function () {
     phoneErrorMsg.style.display = "none";
     }
 }
+
+//Continue button validation
+
+var loginBtn = document.getElementById("submitBtn");
+loginBtn.onclick = function(e){
+    e.preventDefault();
+    if(InputValue.includes(emailInput.value) && InputValue.includes(passInput.value)){
+        console.log("login")
+        alert('Signed up successfully!' + '\n' + 'Name: ' + InputValue[0] + '\n' +
+            'Lastname ' + InputValue[1] + '\n' +
+            'DNI ' + InputValue[2] + '\n' +
+            'Email ' + InputValue[3] + '\n' +
+            'Password ' + InputValue[4] + '\n' +
+            'Repeat Password ' + InputValue[5] + '\n' +
+            'Date of Birth ' + InputValue[6] + '\n' +
+            'Adress ' + InputValue[7] + '\n' +
+            'City ' + InputValue[8] + '\n' +
+            'State ' + InputValue[9] + '\n' +
+            'Postal Code ' + InputValue[10] + '\n' +
+            'Phone number ' + InputValue[11])
+        }
+    }
+
+    loginBtn.onclick = function(e) {
+        var sentence = "One or more fields are empty. Please fill the entire form.";
+        e.preventDefault();
+        
+        var nameInput = document.getElementById("name");
+        var lastNameInput = document.getElementById("lastname");
+        var dniInput = document.getElementById("dni");
+        var emailInput = document.getElementById("email");
+        var passInput = document.getElementById("password");
+        var repeatInput = document.getElementById("repeat-password");
+        var dateInput = document.getElementById("date-of-birth");
+        var addressInput = document.getElementById("address");
+        var cityInput = document.getElementById("city");
+        var stateInput = document.getElementById("state");
+        var postalInput = document.getElementById("postal-code");
+        var phoneInput = document.getElementById("phone-number");
+        
+        if (nameInput.value === ''|| lastNameInput.value === ''|| 
+        dniInput.value === ''|| emailInput.value === ''|| passInput.value === '' || 
+        repeatInput.value === ''|| dateInput.value === ''|| addressInput.value === ''|| 
+        cityInput.value === ''|| stateInput.value === ''|| postalInput.value === ''|| phoneInput.value === '') {
+        console.log("loginEmpty");
+        alert(sentence);
+        }
+    };
+
