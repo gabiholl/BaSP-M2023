@@ -41,5 +41,11 @@ Letters only and must be more than 3 letters
 - Postal Code:
 Numbers only and must have between 4 and 5 numbers.
 
--Repeat password:
+-Email:
+Must have a valid email format.
+
+-Password:
 At least 8 characters, including 1 lowercase, 1 uppercase and 1 number
+
+-Repeat password:
+Must be the same than Password

@@ -2,15 +2,15 @@ var InputValue = [];
 
 var emailInput = document.getElementById("email");
 var passInput = document.getElementById("password");
-// var loginBtn = document.getElementsByClassName("continue");
+
+//Continue button
+var loginBtn = document.getElementById("submitBtn");
 
 //Error Msgs
 var errorMsgs = document.getElementsByClassName("error-msg")
 var emailErrorMsg = document.getElementById("email-error-msg")
 var passErrorMsg = document.getElementById("password-error-msg")
 
-//el else tiene que ser lo que esta bien
-// cartel verde de exito cuando esta todo bien y le das al continue
 
 //Email validation
 var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
@@ -36,20 +36,21 @@ emailInput.onfocus = function () {
 
 passInput.onblur = function () {
     var password = passInput.value;
-    var hasBigLetter   = false;
+    var hasBigLetter = false;
     var hasSmallLetter = false;
-    var hasNumber      = false;
+    var hasNumber = false;
     for (var i = 0; i < password.length; i++) {
-        var charCode = password.charCodeAt(i);
-        if(charCode > 47 && charCode < 58)
-            hasNumber = true;
-        if(charCode > 64 && charCode < 91)
-            hasBigLetter = true;
-        if(charCode > 96 && charCode < 123)
-            hasSmallLetter = true;
-        if(!hasBigLetter && !hasSmallLetter && !hasNumber) {
+        var char = password.charAt(i);
+        if (char >= "0" && char <= "9") {
+        hasNumber = true;
+        } else if (char === char.toUpperCase()) {
+        hasBigLetter = true;
+        } else if (char === char.toLowerCase()) {
+        hasSmallLetter = true;
+        }
+        if (!hasBigLetter || !hasSmallLetter || !hasNumber) {
             passInput.classList.add("errors");
-            passErrorMsg.style.display = "flex";
+            passErrorMsg.style.display = "block";
         } else {
             passInput.classList.add("border-correct");
             passInput.classList.remove("errors");
