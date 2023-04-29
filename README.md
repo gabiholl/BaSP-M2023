@@ -18,13 +18,17 @@ For the second week I have been working with HTML, it was my first time using Gi
 
 In the third week I have been working with HTML, CSS, Git and Github. I tried to do my best to make the page pixel perfect just like we did in figma, I have some issues with CSS but I'll improve.
 
-## Week-04
+## Week-04 - Flex
 
 In the fourth week I have been working with flex and flexbox in mobile first and responsive design, I have modified HTML and CSS, I also continue working with Git and Github. I had some difficulties to understand the use of media queries but I was able to do it.
 
-## Week-05
+## Week-05 - javascript exercises
 
 For the fifth week I had to solve exercises in javascript given by radium and correct errors from week 4 from the feedback of the tutor.
+
+## Week-06 - Login and sign up Javascript
+
+For the sixth week I have worked in html and css login and sign up, in addition I use validations in js for Login and sign up.
 
 ## Sections
 

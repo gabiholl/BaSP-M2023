@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" type="text/css" href="/week-07/css/login.css">
+</head>
+<body class="container-body">
+    <header class="header">
+        <p>Mega Rocket SA</p>
+    </header>
+    <main class="container-main">
+        <div>
+            <a href="/week-07/views/index.html"><img src="/assets/img/back-icon.png" alt="back" class="back-icon"></a>
+        </div>
+        <!-- <div class="errorAlert">
+            <label for="error-alert">Oops! Your email or password is incorrect. Please try again</label>
+        </div> -->
+        <h1 class="login-text">Log In</h1>
+        <img src="/assets/img/logo-img.png" alt="logo-icon" class="logo-icon">
+        <section class="data">
+            <ul>
+                <li>
+                    <label for="email">Email</label>
+                    <input id="email" type="text" placeholder="sarawilliams@mail.com" name="email" class="login-inputs">
+                    <p class="error-msg" id="email-error-msg">The email format is not valid.</p>
+                </li>
+                <li>
+                    <label for="password">Password</label>
+                    <input id="password" type="password" name="password" class="login-inputs">
+                    <div class="error-msg" id="password-error-msg">
+                        Password must contain:
+                        at least 8 characters, including 1 lowercase, 1 uppercase and 1 number
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <div class="remember">
+            <input type="radio" id="cost" name="remember-me" value="remember-me" class="radio">
+            <p>Remember Me</p>
+            <a href="forgot-pasword">Forgot Password?</a>
+        </div>
+        <div>
+            <button type="submit" id="submitBtn"  class="continue">Continue</button>
+        </div>
+        <div class="register">
+            <p>Are you new here?</p>
+            <a href="/week-07/views/sign-up.html" class="register">Register</a>
+        </div>
+    </main>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+@media screen and (min-width: 600px){
+    .header{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        height: 118px;
+        background-color: #373867;
+        font-size: 40px;
+        font-weight: bold;
+        color: #fff;
+        top: 0;
+        left: 0;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        height: 118px;
+        background-color: #373867;
+        font-size: 40px;
+        font-weight: bold;
+        color: #fff;
+        top: 0;
+        left: 0;
+    }
+}
+
+
