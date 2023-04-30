@@ -7,12 +7,12 @@ var dniInput = document.getElementById("dni");
 var emailInput = document.getElementById("email");
 var passInput = document.getElementById("password");
 var repeatInput = document.getElementById("repeat-password");
-var dateInput = document.getElementById("date-of-birth");
+var dateInput = document.getElementById("dob");
 var addressInput = document.getElementById("address");
 var cityInput = document.getElementById("city");
 var stateInput = document.getElementById("state");
 var postalInput = document.getElementById("postal-code");
-var phoneInput = document.getElementById("phone-number");
+var phoneInput = document.getElementById("phone");
 
 //Error Msgs
 var errorMsgs = document.getElementsByClassName("error-msg");
@@ -36,11 +36,9 @@ var loginBtn = document.getElementById("submitBtn");
 var nameInput = document.getElementById("name");
 nameInput.onblur = function () {
     if (nameInput.value.length < 4) {
-        console.log("pasoa");
         nameInput.classList.add("errors");
         nameErrorMsg.style.display = "flex";
     } else {
-        console.log("pasob");
         nameInput.classList.add("border-correct");
         nameInput.classList.remove("errors");
         nameErrorMsg.style.display = "none";
@@ -49,7 +47,6 @@ nameInput.onblur = function () {
 }
 
 nameInput.onfocus = function () {
-    console.log("focus");
     nameInput.classList.remove("errors");
     nameInput.classList.remove("border-correct");
     nameErrorMsg.style.display = "none";
@@ -61,11 +58,9 @@ var lastNameInput = document.getElementById("lastname");
 lastNameInput.onblur = function () {
     lastNameValue = lastNameInput.value;
     if (lastNameValue.length < 4) {
-        console.log("pasoa");
         lastNameInput.classList.add("errors");
         lastNameErrorMsg.style.display = "flex";
     } else {
-        console.log("pasob");
         lastNameInput.classList.add("border-correct");
         lastNameInput.classList.remove("errors");
         lastNameErrorMsg.style.display = "none";
@@ -74,7 +69,6 @@ lastNameInput.onblur = function () {
 }
 
 lastNameInput.onfocus = function () {
-    console.log("focus");
     lastNameInput.classList.remove("errors");
     lastNameInput.classList.remove("border-correct");
     lastNameErrorMsg.style.display = "none";
@@ -91,11 +85,9 @@ dniInput.onblur = function () {
         hasNumber = true;
         }
         if ((dniValue.length < 7) || (!hasNumber)) {
-            console.log("pasoa");
             dniInput.classList.add("errors");
             dniErrorMsg.style.display = "flex";
         } else {
-            console.log("pasob");
             dniInput.classList.add(".border-correct");
             dniInput.classList.remove("errors");
             dniErrorMsg.style.display = "none";
@@ -105,7 +97,6 @@ dniInput.onblur = function () {
 }
 
 dniInput.onfocus = function () {
-    console.log("focus");
     dniInput.classList.remove("errors");
     dniInput.classList.remove("border-correct");
     dniErrorMsg.style.display = "none";
@@ -113,10 +104,11 @@ dniInput.onfocus = function () {
 
 //date of birth validation
 
-var dateInput = document.getElementById("date-of-birth");
+var dateInput = document.getElementById("dob");
 dateInput.onblur = function () {
-var validatedDate =  dateInput.value.split("-", 3);
-    console.log(validatedDate)
+    var validatedDate =  dateInput.value.split("-");
+    var formattedDate = validatedDate[1] + '/' + validatedDate[2] + '/' + validatedDate[0];
+// var validatedDate =  dateInput.value.split("-", 3);
     if (dateInput.value.length == 0){
         dateInput.classList.add("errors");
         dateErrorMsg.style.display = "flex";
@@ -128,7 +120,6 @@ var validatedDate =  dateInput.value.split("-", 3);
 }
 
     dateInput.onfocus = function () {
-        console.log("focus");
         dateInput.classList.remove("errors");
         dateInput.classList.remove("border-correct");
         dateErrorMsg.style.display = "none";
@@ -215,7 +206,7 @@ var addressInput = document.getElementById("address");
 addressInput.onblur = function () {
     address = addressInput.value;
     hasNumber = false;
-    words = addres
+    words = address
     function hasWhiteSpace(words) {
         return words.indexOf(' ') >= 0;
     }
@@ -234,11 +225,9 @@ addressInput.onblur = function () {
             InputValue[10] = addressInput.value;
         }
     if (addressInput.value.length < 4) {
-        console.log("pasoa");
         addressInput.classList.add("errors");
         addressErrorMsg.style.display = "flex";
     } else {
-        console.log("pasob");
         addressInput.classList.add("border-correct");
         addressInput.classList.remove("errors");
         addressErrorMsg.style.display = "none";
@@ -256,11 +245,9 @@ addressInput.onfocus = function () {
 var cityInput = document.getElementById("city");
 cityInput.onblur = function () {
     if (cityInput.value.length < 4) {
-        console.log("pasoa");
         cityInput.classList.add("errors");
         cityErrorMsg.style.display = "flex";
     } else {
-        console.log("pasob");
         cityInput.classList.add("border-correct");
         cityInput.classList.remove("errors");
         cityErrorMsg.style.display = "none";
@@ -278,11 +265,9 @@ cityInput.onfocus = function () {
 var stateInput = document.getElementById("state");
 stateInput.onblur = function () {
     if (stateInput.value.length < 4) {
-        console.log("pasoa");
         stateInput.classList.add("errors");
         stateErrorMsg.style.display = "flex";
     } else {
-        console.log("pasob");
         stateInput.classList.add("border-correct");
         stateInput.classList.remove("errors");
         stateErrorMsg.style.display = "none";
@@ -355,27 +340,50 @@ phoneInput.onfocus = function () {
 
 //Continue button validation
 
-var loginBtn = document.getElementById("submitBtn");
-loginBtn.onclick = function(e){
-    e.preventDefault();
-    if(InputValue.includes(emailInput.value) && InputValue.includes(passInput.value)){
-        console.log("login")
-        alert('Signed up successfully!' + '\n' + 'Name: ' + InputValue[0] + '\n' +
-            'Lastname ' + InputValue[1] + '\n' +
-            'DNI ' + InputValue[2] + '\n' +
-            'Email ' + InputValue[3] + '\n' +
-            'Password ' + InputValue[4] + '\n' +
-            'Repeat Password ' + InputValue[5] + '\n' +
-            'Date of Birth ' + InputValue[6] + '\n' +
-            'Adress ' + InputValue[7] + '\n' +
-            'City ' + InputValue[8] + '\n' +
-            'State ' + InputValue[9] + '\n' +
-            'Postal Code ' + InputValue[10] + '\n' +
-            'Phone number ' + InputValue[11])
-        }
-    }
 
-    loginBtn.onclick = function(e) {
+var submitBtn = document.getElementById("submitBtn");
+submitBtn.onclick = function(e){
+    var validatedDate =  dateInput.value.split("-");
+    var formattedDate = validatedDate[1] + '/' + validatedDate[2] + '/' + validatedDate[0];
+    e.preventDefault();
+    if (nameInput.value === ''|| lastNameInput.value === ''|| 
+    dniInput.value === ''|| emailInput.value === ''|| passInput.value === '' || 
+    repeatInput.value === ''|| dateInput.value === ''|| addressInput.value === ''|| 
+    cityInput.value === ''|| postalInput.value === ''|| phoneInput.value === '') {
+    } else if (InputValue.includes(emailInput.value) && InputValue.includes(passInput.value)) {
+        var signUpUrl = `https://api-rest-server.vercel.app/signup?name=${nameInput.value}&lastName=${lastNameInput.value}&dni=${dniInput.value}&email=${emailInput.value}&password=${passInput.value}&dob=${formattedDate}&address=${addressInput.value}&city=${cityInput.value}&zip=${postalInput.value}&phone=${phoneInput.value}`
+        fetch(signUpUrl)
+        .then (function(response){
+            return response.json();
+        })
+        .then (function(sentence){
+            if (sentence.success){
+                alert ("User registered successfully. " + sentence.msg);
+                send()
+                alert('Signed up successfully!' + '\n' + 'Name: ' + InputValue[0] + '\n' +
+                'Lastname ' + InputValue[1] + '\n' +
+                'DNI ' + InputValue[2] + '\n' +
+                'Email ' + InputValue[3] + '\n' +
+                'Password ' + InputValue[4] + '\n' +
+                'Repeat Password ' + InputValue[5] + '\n' +
+                'Date of Birth ' + InputValue[6] + '\n' +
+                'Adress ' + InputValue[7] + '\n' +
+                'City ' + InputValue[8] + '\n' +
+                'State ' + InputValue[9] + '\n' +
+                'Postal Code ' + InputValue[10] + '\n' +
+                'Phone number ' + InputValue[11])
+            } else{
+                throw new Error (sentence.msg);
+            } 
+        })
+        .catch (function(error){
+            alert (error);
+        })
+    }
+}
+
+
+/*    loginBtn.onclick = function(e) {
         var sentence = "One or more fields are empty. Please fill the entire form.";
         e.preventDefault();
         
@@ -399,6 +407,31 @@ loginBtn.onclick = function(e){
         console.log("loginEmpty");
         alert(sentence);
         }
-    };
+    };*/
 
-//-----------------Week 07-----------------//
+//-----------------Local Storage-----------------//
+
+function send() {
+    localStorage.setItem("name", nameInput.value);
+    localStorage.setItem("lastname", lastNameInput.value);
+    localStorage.setItem("dni", dniInput.value);
+    localStorage.setItem("email", emailInput.value);
+    localStorage.setItem("password", passInput.value);
+    localStorage.setItem("dob", dateInput.value);
+    localStorage.setItem("address", addressInput.value);
+    localStorage.setItem("city", cityInput.value);
+    localStorage.setItem("zip", postalInput.value);
+    localStorage.setItem("phone", phoneInput.value);
+}
+window.onload = function() {
+    nameInput.value = localStorage.getItem("name");
+    lastNameInput.value = localStorage.getItem("lastname");
+    dniInput.value = localStorage.getItem("dni");
+    emailInput.value = localStorage.getItem("email");
+    passInput.value = localStorage.getItem("password");
+    dateInput.value = localStorage.getItem("dob");
+    addressInput.value = localStorage.getItem("address");
+    cityInput.value = localStorage.getItem("city");
+    postalInput.value = localStorage.getItem("postal-code");
+    phoneInput.value = localStorage.getItem("phone");
+}

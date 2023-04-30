@@ -84,7 +84,7 @@ loginBtn.onclick = function(e){
         })
         .then (function(sentence){
             if (sentence.success){
-                alert ("Welcome! your email and pasword are valid." + sentence.msg);
+                alert ("Welcome! " + sentence.msg);
             } else{
                 throw new Error (sentence.msg);
             } 
