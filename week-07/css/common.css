@@ -94,10 +94,11 @@
     }
 
     .general-footer{
-    margin-left: 330px;
+    margin-left: 175px;
     }
 
     .general-footer p{
         margin-left: 0;
+        margin-top: 20px;
         }
 }

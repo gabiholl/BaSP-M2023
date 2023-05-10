@@ -33,7 +33,6 @@ var phoneErrorMsg = document.getElementById("phone-error-msg");
 var loginBtn = document.getElementById("submitBtn");
 
 //Name validation
-var nameInput = document.getElementById("name");
 nameInput.onblur = function () {
     if (nameInput.value.length < 4) {
         nameInput.classList.add("errors");
@@ -52,9 +51,7 @@ nameInput.onfocus = function () {
     nameErrorMsg.style.display = "none";
 }
 
-
 //Lastname validation
-var lastNameInput = document.getElementById("lastname");
 lastNameInput.onblur = function () {
     lastNameValue = lastNameInput.value;
     if (lastNameValue.length < 4) {
@@ -75,7 +72,6 @@ lastNameInput.onfocus = function () {
 }
 
 //dni validation
-var dniInput = document.getElementById("dni");
 dniInput.onblur = function () {
     dniValue = dniInput.value;
     hasNumber = false;
@@ -102,30 +98,6 @@ dniInput.onfocus = function () {
     dniErrorMsg.style.display = "none";
 }
 
-//date of birth validation
-
-var dateInput = document.getElementById("dob");
-dateInput.onblur = function () {
-    var validatedDate =  dateInput.value.split("-");
-    var formattedDate = validatedDate[1] + '/' + validatedDate[2] + '/' + validatedDate[0];
-// var validatedDate =  dateInput.value.split("-", 3);
-    if (dateInput.value.length == 0){
-        dateInput.classList.add("errors");
-        dateErrorMsg.style.display = "flex";
-    } else if (validatedDate[0] > 2023) {
-        dateInput.classList.add("errors");
-        dateInput.classList.remove(".border-correct");
-        dateErrorMsg.style.display = "flex";
-    }
-}
-
-    dateInput.onfocus = function () {
-        dateInput.classList.remove("errors");
-        dateInput.classList.remove("border-correct");
-        dateErrorMsg.style.display = "none";
-    }
-
-
 //Email validation
 var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 
@@ -145,9 +117,7 @@ emailInput.onfocus = function () {
     emailErrorMsg.style.display = "none";
 }
 
-
 //Password validation
-
 passInput.onblur = function () {
     var password = passInput.value;
     var hasBigLetter = false;
@@ -201,8 +171,32 @@ repeatInput.onfocus = function () {
     cityErrorMsg.style.display = "none";
 }
 
+//date of birth validation
+dateInput.onblur = function () {
+    var validatedDate =  dateInput.value.split("-");
+    var formattedDate = validatedDate[1] + '/' + validatedDate[2] + '/' + validatedDate[0];
+    if (dateInput.value.length == 0){
+        dateInput.classList.add("errors");
+        dateErrorMsg.style.display = "flex";
+    } else if (formattedDate[0] > 2023) {
+        dateInput.classList.add("errors");
+        dateInput.classList.remove("border-correct");
+        dateErrorMsg.style.display = "flex";
+    } else {
+        dateInput.classList.remove("errors");
+        dateInput.classList.add("border-correct");
+        dateErrorMsg.style.display = "none";
+        InputValue[6] = formattedDate;
+    }
+}
+
+    dateInput.onfocus = function () {
+        dateInput.classList.remove("errors");
+        dateInput.classList.remove("border-correct");
+        dateErrorMsg.style.display = "none";
+    }
+
 // address validation
-var addressInput = document.getElementById("address");
 addressInput.onblur = function () {
     address = addressInput.value;
     hasNumber = false;
@@ -215,23 +209,15 @@ addressInput.onblur = function () {
         if (char >= "0" && char <= "9") {
         hasNumber = true;
         }
-        if ((address.length > 5) || (hasWhiteSpace > 0)) {
-            addressInput.classList.add("errors");
-            addressErrorMsg.style.display = "block";
-        } else {
-            addressInput.classList.add("border-correct");
-            addressInput.classList.remove("errors");
-            addressErrorMsg.style.display = "none";
-            InputValue[10] = addressInput.value;
-        }
-    if (addressInput.value.length < 4) {
+    }
+    if ((address.length < 4) || (hasWhiteSpace(address) == 0)) {
         addressInput.classList.add("errors");
-        addressErrorMsg.style.display = "flex";
-    } else {
+        addressErrorMsg.style.display = "block";
+    } else { 
         addressInput.classList.add("border-correct");
         addressInput.classList.remove("errors");
         addressErrorMsg.style.display = "none";
-        InputValue[8] = addressInput.value;
+        InputValue[7] = addressInput.value;
     }
 }
 
@@ -242,7 +228,6 @@ addressInput.onfocus = function () {
 }
 
 // City validation
-var cityInput = document.getElementById("city");
 cityInput.onblur = function () {
     if (cityInput.value.length < 4) {
         cityInput.classList.add("errors");
@@ -262,7 +247,6 @@ cityInput.onfocus = function () {
 }
 
 // state validation
-var stateInput = document.getElementById("state");
 stateInput.onblur = function () {
     if (stateInput.value.length < 4) {
         stateInput.classList.add("errors");
@@ -291,15 +275,15 @@ postalInput.onblur = function () {
         if (char >= "0" && char <= "9") {
         hasNumber = true;
         }
-        if ((postal.length < 4 || postal.length > 5) || (!hasNumber)) {
-            postalInput.classList.add("errors");
-            postalErrorMsg.style.display = "block";
-        } else {
-            postalInput.classList.add("border-correct");
-            postalInput.classList.remove("errors");
-            postalErrorMsg.style.display = "none";
-            InputValue[10] = postalInput.value;
-        }
+    }
+    if ((postal.length < 4 || postal.length > 5) || (!hasNumber)) {
+        postalInput.classList.add("errors");
+        postalErrorMsg.style.display = "block";
+    } else {
+        postalInput.classList.add("border-correct");
+        postalInput.classList.remove("errors");
+        postalErrorMsg.style.display = "none";
+        InputValue[10] = postalInput.value;
     }
 }
 
@@ -326,7 +310,7 @@ phoneInput.onblur = function () {
             phoneInput.classList.add("border-correct");
             phoneInput.classList.remove("errors");
             phoneErrorMsg.style.display = "none";
-            InputValue[10] = phoneInput.value;
+            InputValue[11] = phoneInput.value;
         }
     }
 }
@@ -335,12 +319,9 @@ phoneInput.onfocus = function () {
     phoneInput.classList.remove("errors");
     phoneInput.classList.remove("border-correct");
     phoneErrorMsg.style.display = "none";
-    }
 }
 
 //Continue button validation
-
-
 var submitBtn = document.getElementById("submitBtn");
 submitBtn.onclick = function(e){
     var validatedDate =  dateInput.value.split("-");
@@ -351,8 +332,18 @@ submitBtn.onclick = function(e){
     repeatInput.value === ''|| dateInput.value === ''|| addressInput.value === ''|| 
     cityInput.value === ''|| postalInput.value === ''|| phoneInput.value === '') {
     } else if (InputValue.includes(emailInput.value) && InputValue.includes(passInput.value)) {
-        var signUpUrl = `https://api-rest-server.vercel.app/signup?name=${nameInput.value}&lastName=${lastNameInput.value}&dni=${dniInput.value}&email=${emailInput.value}&password=${passInput.value}&dob=${formattedDate}&address=${addressInput.value}&city=${cityInput.value}&zip=${postalInput.value}&phone=${phoneInput.value}`
-        fetch(signUpUrl)
+        var signUpUrl = `https://api-rest-server.vercel.app/signup`;
+        fetch(signUpUrl +
+            "?name="+nameInput.value +
+            "&lastName="+lastNameInput.value +
+            "&dni="+dniInput.value +
+            "&email="+emailInput.value +
+            "&password="+passInput.value +
+            "&dob="+ formattedDate +
+            "&address="+addressInput.value +
+            "&city="+ cityInput.value +
+            "&zip="+ postalInput.value +
+            "&phone="+ phoneInput.value)
         .then (function(response){
             return response.json();
         })
@@ -373,7 +364,7 @@ submitBtn.onclick = function(e){
                 'Postal Code ' + InputValue[10] + '\n' +
                 'Phone number ' + InputValue[11])
             } else{
-                throw new Error (sentence.msg);
+                throw new Error ("Oops! One or more inputs are incorrect, check again please.");
             } 
         })
         .catch (function(error){
@@ -382,35 +373,7 @@ submitBtn.onclick = function(e){
     }
 }
 
-
-/*    loginBtn.onclick = function(e) {
-        var sentence = "One or more fields are empty. Please fill the entire form.";
-        e.preventDefault();
-        
-        var nameInput = document.getElementById("name");
-        var lastNameInput = document.getElementById("lastname");
-        var dniInput = document.getElementById("dni");
-        var emailInput = document.getElementById("email");
-        var passInput = document.getElementById("password");
-        var repeatInput = document.getElementById("repeat-password");
-        var dateInput = document.getElementById("date-of-birth");
-        var addressInput = document.getElementById("address");
-        var cityInput = document.getElementById("city");
-        var stateInput = document.getElementById("state");
-        var postalInput = document.getElementById("postal-code");
-        var phoneInput = document.getElementById("phone-number");
-        
-        if (nameInput.value === ''|| lastNameInput.value === ''|| 
-        dniInput.value === ''|| emailInput.value === ''|| passInput.value === '' || 
-        repeatInput.value === ''|| dateInput.value === ''|| addressInput.value === ''|| 
-        cityInput.value === ''|| stateInput.value === ''|| postalInput.value === ''|| phoneInput.value === '') {
-        console.log("loginEmpty");
-        alert(sentence);
-        }
-    };*/
-
 //-----------------Local Storage-----------------//
-
 function send() {
     localStorage.setItem("name", nameInput.value);
     localStorage.setItem("lastname", lastNameInput.value);
@@ -423,6 +386,7 @@ function send() {
     localStorage.setItem("zip", postalInput.value);
     localStorage.setItem("phone", phoneInput.value);
 }
+
 window.onload = function() {
     nameInput.value = localStorage.getItem("name");
     lastNameInput.value = localStorage.getItem("lastname");

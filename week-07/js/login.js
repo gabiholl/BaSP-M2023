@@ -12,7 +12,6 @@ var errorMsgs = document.getElementsByClassName("error-msg")
 var emailErrorMsg = document.getElementById("email-error-msg")
 var passErrorMsg = document.getElementById("password-error-msg")
 
-
 //Email validation
 var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 
@@ -31,7 +30,6 @@ emailInput.onfocus = function () {
     emailInput.classList.remove("border-correct");
     emailErrorMsg.style.display = "none";
 }
-
 
 //Password validation
 
@@ -67,7 +65,6 @@ passInput.onfocus = function () {
     passErrorMsg.style.display = "none";
 }
 
-
 //Continue button validation
 
 var loginBtn = document.getElementById("submitBtn");
@@ -94,18 +91,3 @@ loginBtn.onclick = function(e){
         })
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
